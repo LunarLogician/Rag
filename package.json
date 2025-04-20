@@ -1,0 +1,49 @@
+{
+  "name": "reports_rag",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@ai-sdk/openai": "^1.2.6",
+    "@ai-sdk/react": "^1.1.24",
+    "@langchain/community": "^0.3.37",
+    "@langchain/core": "^0.3.45",
+    "@pinecone-database/pinecone": "^5.1.1",
+    "@types/html-pdf-node": "^1.0.2",
+    "@types/puppeteer": "^7.0.4",
+    "@vercel/ai-utils": "^0.0.2",
+    "@xenova/transformers": "^2.17.2",
+    "ai": "2.2.36",
+    "ai-stream": "^0.0.4",
+    "emitter": "^0.0.5",
+    "html-pdf-node": "^1.0.8",
+    "lucide-react": "^0.483.0",
+    "next": "15.2.3",
+    "openai": "^4.87.4",
+    "papaparse": "^5.5.2",
+    "puppeteer": "^24.6.0",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "react-markdown": "^10.1.0",
+    "sharp": "^0.33.5",
+    "vercel": "^41.4.1",
+    "vercel-ai": "^0.0.0",
+    "zod": "^3.24.2"
+  },
+  "devDependencies": {
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "autoprefixer": "^10.4.16",
+    "eslint": "^9",
+    "eslint-config-next": "15.2.3",
+    "postcss": "^8.4.38",
+    "tailwindcss": "^3.4.3",
+    "typescript": "^5"
+  }
+}

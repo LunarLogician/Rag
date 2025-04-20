@@ -1,0 +1,7 @@
+langchain==0.1.12
+pinecone-client==3.1.0
+openai==1.14.0
+python-dotenv==1.0.1
+tiktoken==0.6.0
+numpy==1.26.4
+pandas==2.2.1 

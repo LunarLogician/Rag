@@ -1,0 +1,44 @@
+services:
+  # Main Analyzer API (FastAPI)
+  - type: web
+    name: analyzer-api
+    env: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: uvicorn main:app --host 0.0.0.0 --port $PORT
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.12.0
+
+  # Flask App Service
+  - type: web
+    name: flask-app
+    env: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: python flask_app/app.py
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.12.0
+      - key: PORT
+        value: 5001
+
+  # ESG Service
+  - type: web
+    name: esg-service
+    env: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: python flask_app/esg.py
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.12.0
+      - key: PORT
+        value: 5002
+
+  # Next.js Frontend
+  - type: web
+    name: rag-frontend
+    env: node
+    buildCommand: npm install && npm run build
+    startCommand: npm start
+    envVars:
+      - key: NODE_VERSION
+        value: 20.11.1 
