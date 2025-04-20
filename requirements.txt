@@ -1,11 +1,8 @@
-langchain==0.1.12
-pinecone-client==3.1.0
-openai==1.14.0
-python-dotenv==1.0.1
-tiktoken==0.6.0
-numpy==1.26.4
-pandas==2.2.1
+fastapi==0.109.2
 uvicorn==0.27.1
-fastapi==0.110.0
 python-multipart==0.0.9
-pydantic==2.11.3 
+pydantic==2.6.1
+langchain==0.1.5
+langchain-openai==0.0.5
+pinecone-client==3.0.2
+python-dotenv==1.0.1 
