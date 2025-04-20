@@ -4,8 +4,8 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
+    "build": "npm install --legacy-peer-deps && npm run build",
+    "start": "next start -p $PORT",
     "lint": "next lint"
   },
   "dependencies": {
@@ -27,8 +27,8 @@
     "openai": "^4.87.4",
     "papaparse": "^5.5.2",
     "puppeteer": "^24.6.0",
-    "react": "^19.0.0",
-    "react-dom": "^19.0.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
     "react-markdown": "^10.1.0",
     "sharp": "^0.33.5",
     "vercel": "^41.4.1",
@@ -37,8 +37,8 @@
   },
   "devDependencies": {
     "@types/node": "^20",
-    "@types/react": "^19",
-    "@types/react-dom": "^19",
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
     "autoprefixer": "^10.4.16",
     "eslint": "^9",
     "eslint-config-next": "15.2.3",
