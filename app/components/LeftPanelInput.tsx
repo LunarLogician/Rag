@@ -1,5 +1,6 @@
 import { useState, useRef } from "react";
 import { Upload, ClipboardPaste } from "lucide-react";
+import { API_CONFIG } from '../config';
 
 export default function LeftPanelInput({
   onUploadComplete,
@@ -61,7 +62,7 @@ export default function LeftPanelInput({
 
   const generateSummary = async (text: string) => {
     try {
-      const res = await fetch("/api/analyze/summary", {
+      const res = await fetch(`${API_CONFIG.ANALYZER_API}${API_CONFIG.ENDPOINTS.SUMMARY}`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ docText: text }),
@@ -83,7 +84,7 @@ export default function LeftPanelInput({
     formData.append("file", selectedFile);
     setIsUploading(true);
     try {
-      const response = await fetch("http://localhost:5001/upload", {
+      const response = await fetch(`${API_CONFIG.FLASK_APP}${API_CONFIG.ENDPOINTS.UPLOAD}`, {
         method: "POST",
         body: formData,
       });

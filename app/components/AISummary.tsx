@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { API_CONFIG } from '../config';
 
 interface AISummaryProps {
   text: string;
@@ -12,7 +13,7 @@ export default function AISummary({ text }: AISummaryProps) {
     const generateSummary = async () => {
       setIsLoading(true);
       try {
-        const response = await fetch('http://localhost:5004/summarize', {
+        const response = await fetch(`${API_CONFIG.ANALYZER_API}${API_CONFIG.ENDPOINTS.SUMMARY}`, {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({ text }),
